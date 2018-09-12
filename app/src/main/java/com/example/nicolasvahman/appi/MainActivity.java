@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         imageView1.setImageResource(R.drawable.greve);
 
 
+        //hej
+
 
     }
 }
