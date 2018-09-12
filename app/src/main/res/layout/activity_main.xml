@@ -17,65 +17,37 @@
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="13dp"
         android:src="@drawable/greve"
         tools:layout_editor_absoluteX="298dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tekst3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="19dp"
         android:text="Greve Tennisklub"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="344dp"
-        android:layout_height="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Den mest fortrukne klub syd og vest fra København"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="272dp"
         android:layout_height="142dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="170dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="21dp"
         android:text="Du er havnet på Greve Tennisklubs app. Foreløbigt er muligheder få, men vi arbejder på at gøre den bedre og bedre. Ideen er, at man altid skal kunne slå træningsplaner og kontaktinformationer op, når man nu engang står og mangler dem."
         android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
 
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="129dp"
-        android:text="Trænere" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:text="Træningsplan" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_alignTop="@+id/button1"
-        android:text="Kontakt" />
+        android:layout_marginBottom="25dp"
+        android:text="Den mest fortrukne klub syd og vest for København" />
 
 </RelativeLayout>

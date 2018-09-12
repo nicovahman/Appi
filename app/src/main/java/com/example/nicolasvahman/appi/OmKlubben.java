@@ -6,20 +6,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.sql.BatchUpdateException;
-
-public class MainActivity extends AppCompatActivity {
+public class OmKlubben extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.example_menu, menu);
         return true;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_om_klubben);
     }
 
     @Override
@@ -47,22 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-        ImageView imageView1 = (ImageView) findViewById(R.id.imageView3);
-        imageView1.setImageResource(R.drawable.greve);
-
-
-
-
-
-        }
-
-
     public  void GoToPractice(){
         Intent intent1;
         intent1 = new Intent(this, Practice.class);
@@ -74,14 +59,13 @@ public class MainActivity extends AppCompatActivity {
         intent=new Intent(this, OmKlubben.class);
         startActivity(intent);
 
-}
+    }
 
     public void GoToStart(){
         Intent intent3;
         intent3 = new Intent(this, MainActivity.class);
         startActivity(intent3);
     }
-
     public  void GoToContact(){
         Intent intent4;
         intent4 = new Intent(this, Kontakt.class);
@@ -89,4 +73,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
