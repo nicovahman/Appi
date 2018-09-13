@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+//fjernet billede her, redundant data
 
 
 
