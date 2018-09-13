@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ImageView imageView1 = (ImageView) findViewById(R.id.imageView3);
-        imageView1.setImageResource(R.drawable.greve);
+
 
 
 
