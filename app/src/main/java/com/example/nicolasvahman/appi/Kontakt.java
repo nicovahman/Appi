@@ -36,7 +36,7 @@ public class Kontakt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kontakt);
 
-        editTextto = findViewById(R.id.to);
+        editTextto = findViewById(R.id.til);
         editTextEmne = findViewById(R.id.editText5);
         editTextMessage = findViewById(R.id.editText6);
 
@@ -104,18 +104,19 @@ public class Kontakt extends AppCompatActivity {
 
     public void sendMail(){
         String modtagere = editTextto.getText().toString();
-        String[] modtagerliste = modtagere.split(",");
+        String [] modtagerliste = modtagere.split(",");
+
 
         String emne = editTextEmne.getText().toString();
         String besked = editTextMessage.getText().toString();
 
         Intent intent4 = new Intent(Intent.ACTION_SEND);
-        intent4.putExtra(Intent.EXTRA_EMAIL, modtagere);
+        intent4.putExtra(Intent.EXTRA_EMAIL, modtagerliste);
         intent4.putExtra(Intent.EXTRA_SUBJECT,emne);
         intent4.putExtra(Intent.EXTRA_TEXT, besked);
 
         intent4.setType("message/rfc822");
-        startActivity(Intent.createChooser(intent4, "Choose and email client"));
+        startActivity(Intent.createChooser(intent4, "Vælg en email du vil benytte"));
 
     }
 

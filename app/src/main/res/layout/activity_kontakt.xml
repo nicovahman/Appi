@@ -46,15 +46,6 @@
         android:layout_alignStart="@+id/kontakttekst"
         android:text="Til:" />
 
-    <EditText
-        android:id="@+id/to"
-        android:layout_width="244dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/kontakttekst"
-        android:layout_below="@+id/kontaktBillede"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
     <TextView
         android:id="@+id/emne"
         android:layout_width="wrap_content"
@@ -100,5 +91,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="58dp"
         android:text="Send" />
+
+    <EditText
+        android:id="@+id/til"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/kontakttekst"
+        android:layout_below="@+id/kontaktBillede"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Kavehv@live.dk" />
 
 </RelativeLayout>
