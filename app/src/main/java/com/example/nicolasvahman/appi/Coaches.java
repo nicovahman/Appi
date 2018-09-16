@@ -1,6 +1,7 @@
 package com.example.nicolasvahman.appi;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,15 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Coaches extends AppCompatActivity {
-    Button btn = (Button) findViewById(R.id.coachKnap);
-    final CheckBox check1 = (CheckBox) findViewById(R.id.checkBox);
-    final CheckBox check2 = (CheckBox) findViewById(R.id.checkBox2);
-    final TextView text1 = (TextView) findViewById(R.id.textView17);
-    final TextView text2 = (TextView) findViewById(R.id.textView20);
+
 
 
     @Override
@@ -59,41 +58,29 @@ public class Coaches extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coaches);
 
+        Button knapcoach = (Button) findViewById(R.id.coachKnap);
+        final CheckBox check1 = (CheckBox) findViewById(R.id.checkBox);
+        final CheckBox check2 = (CheckBox) findViewById(R.id.checkBox2);
+        final TextView text1 = (TextView)  findViewById(R.id.textView17);
+        final TextView text2 = (TextView)  findViewById(R.id.textView20);
 
 
-
-
-
-
-
-        btn.setOnClickListener(new View.OnClickListener() {
+       knapcoach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(check1.isChecked()){
-                    Toast.makeText(getApplicationContext(),"Denne mail er " + text1.getText().toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Du har trykket på " + text1.getText().toString(), Toast.LENGTH_LONG).show();
 
                 }
 
                 if(check2.isChecked()){
-                    Toast.makeText(getApplicationContext(), "Denne mail er " + text2.getText().toString(), Toast.LENGTH_LONG).show();
-
-                }
-
-                if(check1.isChecked() && check2.isChecked()){
-                    Toast.makeText(getApplicationContext(), "Disse mails er krydset af " + text1.getText().toString() +" "+ text2.getText().toString(), Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(getApplicationContext(), "Du har trykket på " + text2.getText().toString(), Toast.LENGTH_LONG).show();
                 }
 
 
             }
         });
-
-
-
-
-
-
 
 
 
@@ -127,8 +114,6 @@ public class Coaches extends AppCompatActivity {
         intent5 = new Intent(this, Coaches.class);
         startActivity(intent5);
     }
-
-
 
 
 }
