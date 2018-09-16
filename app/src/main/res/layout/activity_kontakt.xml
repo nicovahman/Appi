@@ -39,20 +39,12 @@
         android:text="Den mest fortrukne klub syd og vest for København" />
 
     <TextView
-        android:id="@+id/navn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/kontaktBillede"
-        android:layout_alignStart="@+id/kontakttekst"
-        android:text="Til:" />
-
-    <TextView
         android:id="@+id/emne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/kontakttekst"
-        android:layout_marginTop="139dp"
+        android:layout_marginTop="172dp"
         android:text="Emne:" />
 
     <EditText
@@ -61,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/kontakttekst"
-        android:layout_marginTop="159dp"
+        android:layout_marginTop="199dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -69,27 +61,30 @@
         android:id="@+id/besked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/kontakttekst"
-        android:layout_below="@+id/editText5"
+        android:layout_marginBottom="222dp"
         android:text="Besked:" />
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="320dp"
-        android:layout_height="151dp"
+        android:layout_width="301dp"
+        android:layout_height="67dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/kontakttekst"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="102dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
 
     <Button
         android:id="@+id/button_send"
         android:layout_width="77dp"
         android:layout_height="38dp"
-        android:layout_alignEnd="@+id/editText6"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="58dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="25dp"
         android:text="Send" />
 
     <EditText
@@ -97,9 +92,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/kontakttekst"
-        android:layout_below="@+id/kontaktBillede"
+        android:layout_below="@+id/navn"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Kavehv@live.dk" />
+        android:text="Kavehv@live.dk"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="265dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/kontakttekst"
+        android:layout_marginTop="70dp"
+        android:text="Har du et spørgsmål? Stil det nedenfor. Vi vil forsøge at besvare dit spørgsmål hurtigst muligt." />
 
 </RelativeLayout>

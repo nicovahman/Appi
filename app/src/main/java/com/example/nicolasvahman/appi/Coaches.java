@@ -8,12 +8,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.sql.BatchUpdateException;
+public class Coaches extends AppCompatActivity {
+    Button btn = (Button) findViewById(R.id.coachKnap);
+    final CheckBox check1 = (CheckBox) findViewById(R.id.checkBox);
+    final CheckBox check2 = (CheckBox) findViewById(R.id.checkBox2);
+    final TextView text1 = (TextView) findViewById(R.id.textView17);
+    final TextView text2 = (TextView) findViewById(R.id.textView20);
 
-public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,23 +50,54 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
 
+
+
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-//fjernet billede her, redundant data
+        setContentView(R.layout.activity_coaches);
 
 
 
 
-        }
 
 
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(check1.isChecked()){
+                    Toast.makeText(getApplicationContext(),"Denne mail er " + text1.getText().toString(), Toast.LENGTH_LONG).show();
+
+                }
+
+                if(check2.isChecked()){
+                    Toast.makeText(getApplicationContext(), "Denne mail er " + text2.getText().toString(), Toast.LENGTH_LONG).show();
+
+                }
+
+                if(check1.isChecked() && check2.isChecked()){
+                    Toast.makeText(getApplicationContext(), "Disse mails er krydset af " + text1.getText().toString() +" "+ text2.getText().toString(), Toast.LENGTH_LONG).show();
+
+                }
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+    }
     public  void GoToPractice(){
         Intent intent1;
         intent1 = new Intent(this, Practice.class);
@@ -73,14 +109,13 @@ public class MainActivity extends AppCompatActivity {
         intent=new Intent(this, OmKlubben.class);
         startActivity(intent);
 
-}
+    }
 
     public void GoToStart(){
         Intent intent3;
         intent3 = new Intent(this, MainActivity.class);
         startActivity(intent3);
     }
-
     public  void GoToContact(){
         Intent intent4;
         intent4 = new Intent(this, Kontakt.class);
@@ -94,5 +129,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
 
+
+}

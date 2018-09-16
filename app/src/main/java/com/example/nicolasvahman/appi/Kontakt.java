@@ -65,7 +65,6 @@ public class Kontakt extends AppCompatActivity {
                 GoToAbout();
                 return true;
             case R.id.item3:
-                Toast.makeText(this, "Item 3 was clicked", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item4:
                 GoToStart();
@@ -101,6 +100,12 @@ public class Kontakt extends AppCompatActivity {
         intent4 = new Intent(this, Kontakt.class);
         startActivity(intent4);
     }
+    public void GoToCoaches(){
+        Intent intent5;
+        intent5 = new Intent(this, Coaches.class);
+        startActivity(intent5);
+    }
+
 
     public void sendMail(){
         String modtagere = editTextto.getText().toString();

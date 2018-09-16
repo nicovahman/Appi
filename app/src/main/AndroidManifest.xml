@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".OmKlubben" />
         <activity android:name=".Practice" />
-        <activity android:name=".Kontakt"></activity>
+        <activity android:name=".Kontakt" />
+        <activity android:name=".TrainingSchedule" />
+        <activity android:name=".Coaches"></activity>
     </application>
 
 </manifest>

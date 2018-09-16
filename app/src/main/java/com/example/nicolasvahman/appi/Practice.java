@@ -36,7 +36,7 @@ public class Practice extends AppCompatActivity {
                 GoToAbout();
                 return true;
             case R.id.item3:
-                Toast.makeText(this, "Item 3 was clicked", Toast.LENGTH_SHORT).show();
+
                 return true;
             case R.id.item4:
                 GoToStart();
@@ -73,5 +73,6 @@ public class Practice extends AppCompatActivity {
         intent4 = new Intent(this, Kontakt.class);
         startActivity(intent4);
     }
+
 
 }
